@@ -2,9 +2,13 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import os
+
 AUTHOR = 'Sameer Soi'
 SITENAME = 'Sameer Soi'
 SITEURL = ''
+
+THEME=os.environ['THEMEDIR']
 
 PATH = 'content'
 
