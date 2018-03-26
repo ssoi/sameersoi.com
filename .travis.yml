@@ -27,5 +27,8 @@ start:
   - THEMEDIR="/tmp/taman-master" make html
 
 deploy:
-  provider: script
-  script: THEMEDIR="/tmp/taman-master" make publish
+  - provider: script
+    skip_cleanup: true
+    script: THEMEDIR="/tmp/taman-master" make publish
+    on:
+      branch: master
