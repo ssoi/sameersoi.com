@@ -27,6 +27,6 @@ script: THEMEDIR="taman-master" make html
 deploy:
   - provider: script
     skip_cleanup: true
-    script: THEMEDIR="taman-master" make publish
+    script: THEMEDIR="taman-master" make ssh_upload
     on:
       branch: master

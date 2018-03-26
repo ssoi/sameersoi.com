@@ -12,9 +12,9 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=localhost
-SSH_PORT=22
-SSH_USER=root
+SSH_HOST=${SSH_HOST}
+SSH_PORT=${SSH_PORT}
+SSH_USER=${SSH_USER}
 SSH_TARGET_DIR=/var/www
 
 S3_BUCKET=my_s3_bucket
