@@ -1,8 +1,5 @@
 language: python
 python:
-  # We don't actually use the Travis Python, but this keeps it organized.
-  - "2.7"
-  - "3.5"
   - "3.6"
 install:
   - sudo apt-get update
@@ -30,4 +27,5 @@ start:
   - THEMEDIR="/tmp/taman-master" make html
 
 deploy:
-  - THEMEDIR="/tmp/taman-master" make publish
+  provider: script
+  script: THEMEDIR="/tmp/taman-master" make publish
