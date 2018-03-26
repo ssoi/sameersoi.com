@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.6"
+  - "3.5"
 install:
   - sudo apt-get update
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
@@ -16,14 +16,13 @@ install:
   - conda install -c anaconda markdown
 
   # install theme
-  - wget -O /tmp/master.zip https://github.com/ssoi/taman/archive/master.zip
-  - cd /tmp/; unzip master.zip
+  - wget https://github.com/ssoi/taman/archive/master.zip
+  - unzip master.zip
 
 before_script:
-  - pelican-themes --install /tmp/taman-master --verbose
+  - pelican-themes --install taman-master --verbose
 
-script:
-  - THEMEDIR="/tmp/taman-master" make html
+script: THEMEDIR="taman-master" make html
 
 #deploy:
 #  - provider: script
