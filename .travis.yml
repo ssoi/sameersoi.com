@@ -23,7 +23,10 @@ install:
   - wget -O /tmp/master.zip https://github.com/ssoi/taman/archive/master.zip
   - cd /tmp/; unzip master.zip
 
-start:
+before_script:
+  - pelican-themes --install /tmp/taman-master --verbose
+
+script:
   - THEMEDIR="/tmp/taman-master" make html
 
 #deploy:
