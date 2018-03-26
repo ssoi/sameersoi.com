@@ -1,0 +1,33 @@
+language: python
+python:
+  # We don't actually use the Travis Python, but this keeps it organized.
+  - "2.7"
+  - "3.5"
+  - "3.6"
+install:
+  - sudo apt-get update
+  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
+      wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+    else
+      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+    fi
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  - conda info -a
+
+  # install pelican and markdown
+  - conda install -c conda-forge pelican
+  - conda install -c anaconda markdown
+
+  # install theme
+  - wget -O /tmp/master.zip https://github.com/ssoi/taman/archive/master.zip
+  - cd /tmp/; unzip master.zip
+
+start:
+  - THEMEDIR="/tmp/taman-master" make html
+
+deploy:
+  - THEMEDIR="/tmp/taman-master" make publish
