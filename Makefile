@@ -12,7 +12,7 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_TARGET_DIR=/var/www
+SSH_TARGET_DIR=/usr/local/nginx/sameersoi.com/
 
 S3_BUCKET=my_s3_bucket
 
