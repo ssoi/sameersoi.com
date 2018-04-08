@@ -97,7 +97,7 @@ publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 ssh_upload: publish
-	sshpass -p $(SSH_PASSWD) scp -vvv -o "StrictHostKeyChecking no" -P $(SSH_PORT) -i deploy/admin_rsa -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+	sshpass -p $(SSH_PASSWD) scp -vvv -o "StrictHostKeyChecking no" -P 2202 -i deploy/admin_rsa -r $(OUTPUTDIR)/* admin@host.sameersoi.com:$(SSH_TARGET_DIR)
 
 rsync_upload: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR) --cvs-exclude
