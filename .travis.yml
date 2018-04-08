@@ -25,10 +25,10 @@ before_script:
 script: THEMEDIR="taman-master" make html
 
 before_deploy:
-  - sudo apt-get install sshpass
   - openssl aes-256-cbc -K $encrypted_ee535eb458ae_key -iv $encrypted_ee535eb458ae_iv -in deploy/admin_rsa.enc -out deploy/admin_rsa -d
-  - md5sum deploy/admin_rsa
   - chmod 0600 deploy/admin_rsa
+  - eval `ssh-agent -s`
+  - SSH_ASKPASS=./deploy/helper.sh ssh-add deploy/admin_rsa
 
 deploy:
   - provider: script
