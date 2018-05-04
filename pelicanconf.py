@@ -28,8 +28,10 @@ AUTHOR_FEED_RSS = None
 LINKS = ()
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github', 'ssoi'),
+          ('stackexchange', '3640'),
+          ('twitter', 'sameersoi'),
+          ('linkedin', 'sameer-soi-91a895b1'),)
 
 DEFAULT_PAGINATION = 5
 
