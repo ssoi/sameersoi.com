@@ -8,7 +8,7 @@ AUTHOR = 'Sameer Soi'
 SITENAME = 'Sameer Soi'
 SITEURL = ''
 
-THEME=os.environ['THEMEDIR']
+THEME = os.environ['THEMEDIR']
 
 PATH = 'content'
 
@@ -16,6 +16,12 @@ TIMEZONE = 'America/Los_Angeles'
 
 DEFAULT_LANG = 'en'
 DEFAULT_DATE = 'fs'
+
+MARKUP = ('md', 'ipynb')
+PLUGIN_PATHS = ['./plugins']
+PLUGINS = ['ipynb.markup']
+
+IGNORE_FILES = [".ipynb_checkpoints"]
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
