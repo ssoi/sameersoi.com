@@ -18,7 +18,8 @@ DEFAULT_LANG = 'en'
 DEFAULT_DATE = 'fs'
 
 MARKUP = ('md', 'ipynb')
-PLUGIN_PATHS = ['./plugins']
+PELICANCONF_PATH = os.path.dirname(os.path.realpath(__file__))
+PLUGIN_PATHS = [os.path.join(PELICANCONF_PATH, 'plugins')]
 PLUGINS = ['ipynb.markup']
 
 IGNORE_FILES = [".ipynb_checkpoints"]
