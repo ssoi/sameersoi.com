@@ -19,6 +19,10 @@ install:
   - wget https://github.com/ssoi/taman/archive/master.zip
   - unzip master.zip
 
+  # initialize and update submodules
+  - git submodule init
+  - git submodule update
+
 before_script:
   - pelican-themes --install taman-master --verbose
 
