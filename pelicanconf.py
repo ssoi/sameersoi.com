@@ -36,7 +36,7 @@ LINKS = ()
 
 # Social widget
 SOCIAL = (('github', 'ssoi'),
-          ('stackexchange', '3640'),
+          ('stackexchange', '328657/sameer'),
           ('twitter', 'sameersoi'),
           ('linkedin', 'sameer-soi-91a895b1'),)
 
