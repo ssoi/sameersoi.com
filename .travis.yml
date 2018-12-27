@@ -11,9 +11,9 @@ install:
   - conda update -q conda
   - conda info -a
 
-  # install pelican and markdown
-  - conda install -c conda-forge pelican
-  - conda install -c anaconda markdown
+  # install pelican, markdown, ipython and matplotlib
+  - conda install -c conda-forge pelican matplotlib
+  - conda install -c anaconda markdown jupyter nbconvert
 
   # install theme
   - wget https://github.com/ssoi/taman/archive/master.zip
