@@ -10,6 +10,7 @@ mypy="*"
 
 [packages]
 pelican = "*"
+awscli = "*"
 
 [requires]
 python_version = "3.7"
