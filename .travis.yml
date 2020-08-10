@@ -20,4 +20,8 @@ before_script:
 script: THEMEDIR="taman-master" make html
 
 deploy:
-    skip_cleanup: true
+  provider: s3
+  access_key_id: $AWS_ACCESS_ID
+  secret_access_key: $AWS_SECRET_ID
+  bucket: sameersoi.com/
+  local_dir: output/
