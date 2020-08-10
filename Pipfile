@@ -11,7 +11,7 @@ mypy="*"
 [packages]
 pelican = "*"
 awscli = "*"
-ipython = "*"
+ipython = { version = ">=7.16.1" }
 
 [requires]
 python_version = "3.7"
