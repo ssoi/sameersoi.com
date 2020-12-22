@@ -9,9 +9,9 @@ flake8="*"
 mypy="*"
 
 [packages]
-pelican = "*"
 awscli = "*"
-ipython = { version = ">=7.16.1" }
+jupyter = "==1.0.0"
+pelican = "==4.5.3"
 
 [requires]
 python_version = "3.7"
