@@ -24,13 +24,11 @@ jobs:
                   command: |
                       wget https://github.com/ssoi/taman/archive/master.zip
                       unzip master.zip
-                      pipenv shell
-                      pelican-themes --install taman-master --verbose
+                      pipenv run pelican-themes --install taman-master --verbose
             - run:
                   name: Create content
                   command: |
-                    pipenv shell
-                    THEMEDIR="taman-master" make html
+                    THEMEDIR="taman-master" pipenv run make html
 workflows:
   main:
     jobs:
