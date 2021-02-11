@@ -1,5 +1,6 @@
 version: 2.1
-
+orbs:
+  aws-s3: circleci/aws-s3@2.0.0
 jobs:
     build:
         docker:
@@ -29,6 +30,12 @@ jobs:
                   name: Create content
                   command: |
                     THEMEDIR="taman-master" pipenv run make html
+            - aws-s3/sync:
+                  arguments: |
+                      --acl public-read \
+                      --cache-control "max-age=86400"
+                  from: output
+                  to: 's3://sameersoi.com/'
 workflows:
   main:
     jobs:
