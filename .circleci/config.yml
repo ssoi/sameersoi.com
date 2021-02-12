@@ -23,9 +23,9 @@ jobs:
             - run:
                   name: Download and install theme
                   command: |
-                      wget https://github.com/ssoi/taman/archive/master.zip
+                      wget https://github.com/ssoi/pelican-blue/archive/master.zip
                       unzip master.zip
-                      pipenv run pelican-themes --install taman-master --verbose
+                      pipenv run pelican-themes --install pelican-blue-master --verbose
             - run:
                   name: Create content
                   command: |
