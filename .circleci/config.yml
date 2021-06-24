@@ -29,7 +29,7 @@ jobs:
             - run:
                   name: Create content
                   command: |
-                    pipenv run make html
+                    pipenv run make DEBUG=1 html
             - aws-s3/sync:
                   arguments: |
                       --acl public-read \
