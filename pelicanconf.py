@@ -33,6 +33,9 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Add blog template
+TEMPLATE_PAGES = {"blog.html": "blog.html"}
+
 # Sidebar menu
 MENUITEMS = (
     ("About", "/pages/about.html"),
