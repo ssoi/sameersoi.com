@@ -37,7 +37,10 @@ AUTHOR_FEED_RSS = None
 LINKS = ()
 
 # Social widget
-SOCIAL = (("github", "ssoi"), ("twitter", "sameersoi"), ("linkedin", "sameer-soi"))
+SOCIAL = (
+    ("github", "https://github.com/ssoi"),
+    ("twitter", "https://twitter.com/sameersoi"),
+    ("linkedin", "https://www.linkedin.com/in/sameersoi/"))
 
 DEFAULT_PAGINATION = 5
 
