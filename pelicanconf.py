@@ -33,6 +33,14 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# Sidebar menu
+MENUITEMS = (
+    ("About", "/pages/about.html"),
+    ("Blog", '/blog.html'),
+    ("Email", "https://mailhide.io/e/VZyUPbTJ"),
+    ("Résumé", "/pdfs/sameer_soi_resume.pdf")
+)
+
 # Blogroll
 LINKS = ()
 
@@ -40,7 +48,9 @@ LINKS = ()
 SOCIAL = (
     ("github", "https://github.com/ssoi"),
     ("twitter", "https://twitter.com/sameersoi"),
-    ("linkedin", "https://www.linkedin.com/in/sameersoi/"))
+    ("linkedin", "https://www.linkedin.com/in/sameersoi/")
+)
+TWITTER_USERNAME = "sameersoi"
 
 DEFAULT_PAGINATION = 5
 
