@@ -37,6 +37,7 @@ AUTHOR_FEED_RSS = None
 TEMPLATE_PAGES = {"blog.html": "blog.html"}
 
 # Sidebar menu
+DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (
     ("About", "/pages/about.html"),
     ("Blog", '/blog.html'),
