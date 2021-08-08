@@ -1,4 +1,5 @@
-title: Bayesian (and non-) analysis of RNA-seq data with Stan
+title: Bayesian analysis of RNA-seq data with Stan
+author: Sameer Soi
 
 ```python
 import numpy as np
@@ -232,7 +233,7 @@ for idx, col in enumerate(metadata_cols[1:], 1):
 
 
     
-![png](rna_seq_stan_files/rna_seq_stan_5_0.png)
+![png](images/rna_seq_stan_5_0.png)
     
 
 
@@ -250,7 +251,7 @@ sns.distplot(np.log10(1 + rnaseq_df[rnaseq_df["sample_id"] == "C61"][gene_cols].
 
 
     
-![png](rna_seq_stan_files/rna_seq_stan_6_1.png)
+![png](images/rna_seq_stan_6_1.png)
     
 
 
@@ -269,7 +270,7 @@ plt.grid(linestyle="--", color="lightgray")
 
 
     
-![png](rna_seq_stan_files/rna_seq_stan_7_0.png)
+![png](images/rna_seq_stan_7_0.png)
     
 
 
@@ -304,7 +305,7 @@ plt.plot(np.linspace(0, 5, 25), np.linspace(0, 5, 25), color="yellow", linewidth
 
 
     
-![png](rna_seq_stan_files/rna_seq_stan_8_1.png)
+![png](images/rna_seq_stan_8_1.png)
     
 
 
@@ -363,7 +364,7 @@ plt.scatter(np.log10(1 + rnaseq_df[gene_cols].sum(axis=1)), posterior["mu_samp"]
 
 
     
-![png](rna_seq_stan_files/rna_seq_stan_11_1.png)
+![png](images/rna_seq_stan_11_1.png)
     
 
 
@@ -398,7 +399,7 @@ plt.grid(linestyle="--", color="lightgray")
 
 
     
-![png](rna_seq_stan_files/rna_seq_stan_13_0.png)
+![png](images/rna_seq_stan_13_0.png)
     
 
 
@@ -421,6 +422,6 @@ plt.hist((posterior["mu_samp[1]"])
 
 
     
-![png](rna_seq_stan_files/rna_seq_stan_14_1.png)
+![png](images/rna_seq_stan_14_1.png)
     
 
