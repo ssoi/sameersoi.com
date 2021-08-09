@@ -1,0 +1,6 @@
+title: Attempting a Bayesian Workflow for RNA-Seq (Part 1)
+slug: attempting-bayesian-rnaseq
+date: 08/08/2021
+category: stats, genomics 
+author: Sameer Soi
+summary: Attempting to apply Michael Betancourt's "Principled Bayesian Workflow" to RNA-Seq data
