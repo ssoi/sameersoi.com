@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
-from pelican_jupyter import markup as nb_markup
-
 import os
+
+from pelican.plugins import pelican_jupyter_reader
 
 AUTHOR = "Sameer Soi"
 SITENAME = "Sameer Soi"
@@ -19,7 +18,7 @@ AVATAR = "https://secure.gravatar.com/avatar/28510cc609a757ebf02fe6db2058cfb7?si
 
 PELICANCONF_PATH = os.path.dirname(os.path.realpath(__file__))
 PLUGIN_PATHS = [os.path.join(PELICANCONF_PATH, "plugins")]
-PLUGINS = [nb_markup]
+PLUGINS = [pelican_jupyter_reader]
 IPYNB_SKIP_CSS=True
 
 DEFAULT_LANG = "en"
