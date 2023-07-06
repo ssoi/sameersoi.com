@@ -23,7 +23,7 @@ statsmodels = "==0.12.2"
 tornado = "< 6.0"
 
 [requires]
-python_version = "3.9"
+python_version = "3.7"
 
 [pipenv]
 allow_prereleases = true
